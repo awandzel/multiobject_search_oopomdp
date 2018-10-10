@@ -1,0 +1,1821 @@
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 1.966
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 1.814
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 2.014
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 2.008
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(28x28) State Size: 784
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 2.093
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(28x28) State Size: 784
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 1.621
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(28x28) State Size: 784
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_L-none_Pr-uniform_Sd-2.0_I-1.txt
+=========================================
+0 Time: 2.049
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_L-none_Pr-uniform_Ps-2.0_I-1.txt
+=========================================
+0 Time: 31.656
+0 Reward: 4820.475930318194
+0 Action: 20
+0 Objects: 5
+....................
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_L-none_Pr-uniform_Ps-2.0_I-1.txt
+=========================================
+0 Time: 114.737
+0 Reward: 4154.292721821282
+0 Action: 76
+0 Objects: 5
+............................................................................
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_L-none_Pr-uniform_Ps-2.0_I-1.txt
+=========================================
+0 Time: 107.524
+0 Reward: 4222.365847038007
+0 Action: 69
+0 Objects: 5
+.....................................................................
+Goals: 5
+WorldMap(15x15) State Size: 225
+TestRun__S-Pomcp_C-searchRoom_O-5_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_L-none_Pr-uniform_Ps-2.0_I-1.txt
+=========================================
+0 Time: 35.641
+0 Reward: 4775.899958133619
+0 Action: 23
+0 Objects: 5
+.......................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-1_A-false_I-1.txt
+=========================================
+0 Time: 10.044
+0 Reward: 2937.171572875254
+0 Action: 9
+0 Objects: 3
+.........
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-1_A-false_I-2.txt
+=========================================
+0 Time: 7.998
+0 Reward: 2958.5857864376267
+0 Action: 7
+0 Objects: 3
+.......
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-1_A-false_I-2.txt
+=========================================
+0 Time: 7.42
+0 Reward: 2958.5857864376267
+0 Action: 7
+0 Objects: 3
+.......
+1 Time: 23.945
+1 Reward: 814.4750161613522
+1 Action: 18
+1 Objects: 1
+..................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-1_A-true_I-2.txt
+=========================================
+0 Time: 25.896
+0 Reward: 2812.1161877371164
+0 Action: 19
+0 Objects: 3
+...................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-1_A-true_I-2.txt
+=========================================
+0 Time: 20.654
+0 Reward: 2834.1005050633885
+0 Action: 17
+0 Objects: 3
+.................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.05_L-0_A-true_I-1.txt
+=========================================
+0 Time: 34.047
+0 Reward: 2674.475016161352
+0 Action: 28
+0 Objects: 3
+............................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.15_L-1_A-false_I-2.txt
+=========================================
+0 Time: 10.18
+0 Reward: 2948.5857864376267
+0 Action: 8
+0 Objects: 3
+........
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 27.753
+0 Reward: 2718.1161877371164
+0 Action: 26
+0 Objects: 3
+..........................
+1 Time: 18.716
+1 Reward: 2816.459333487624
+1 Action: 18
+1 Objects: 3
+..................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 28.77
+0 Reward: 2753.630906362878
+0 Action: 24
+0 Objects: 3
+........................
+1 Time: 31.185
+1 Reward: 2718.1161877371164
+1 Action: 26
+1 Objects: 3
+..........................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 29.833
+0 Reward: 2784.1161877371164
+0 Action: 21
+0 Objects: 3
+.....................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Random_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 0.392
+0 Reward: -1104.7122393876298
+0 Action: 10
+0 Objects: -1
+..........
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Random_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-50_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 0.898
+0 Reward: -2595.017041060861
+0 Action: 50
+0 Objects: -2
+..................................................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-50_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 20.56
+0 Reward: -619.951390709841
+0 Action: 51
+0 Objects: 0
+...................................................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-50_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 49.492
+0 Reward: 1386.585786437627
+0 Action: 52
+0 Objects: 2
+....................................................
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-2.txt
+=========================================
+0 Time: 1.917
+0 Reward: -11.414213562373096
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 1.411
+1 Reward: -19.055385138137417
+1 Action: 1
+1 Objects: 0
+.
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-1.txt
+=========================================
+0 Time: 2.904
+0 Reward: -11.414213562373096
+0 Action: 1
+0 Objects: 0
+.
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-1_A-true_I-1.txt
+=========================================
+0 Time: 2.211
+0 Reward: -11.414213562373096
+0 Action: 1
+0 Objects: 0
+.
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-true_I-1.txt
+=========================================
+0 Time: 2.853
+0 Reward: -11.414213562373096
+0 Action: 1
+0 Objects: 0
+.
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 1.818
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+Goals: 3
+WorldMap(11x11) State Size: 121
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 1.711
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 1.958
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 1.712
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 2.718
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-3_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-.15_L-0_A-true_I-1.txt
+=========================================
+0 Time: 1.405
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 1.487
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 1.998
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 74.71
+0 Reward: 3606.531659314525
+0 Action: 33
+0 Objects: 4
+.................................
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 257.113
+0 Reward: 2798.1731662979664
+0 Action: 94
+0 Objects: 4
+..............................................................................................
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 217.045
+0 Reward: 3055.248524620253
+0 Action: 75
+0 Objects: 4
+...........................................................................
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 244.755
+0 Reward: 2791.8481403586884
+0 Action: 92
+0 Objects: 4
+............................................................................................
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-1.0_L-1_A-false_I-1.txt
+=========================================
+0 Time: 237.89
+0 Reward: 2848.069396022121
+0 Action: 84
+0 Objects: 4
+....................................................................................
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-150_R-true_Rs1000_C-999_Ps-.15_L-2_A-false_I-1.txt
+=========================================
+0 Time: 96.812
+0 Reward: 3563.4071319471072
+0 Action: 35
+0 Objects: 4
+...................................
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-2.txt
+=========================================
+0 Time: 0.764
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-2.txt
+=========================================
+0 Time: 0.801
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.488
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-2.txt
+=========================================
+0 Time: 0.807
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.582
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-5.txt
+=========================================
+0 Time: 1.132
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.673
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.462
+2 Reward: -10.0
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.445
+3 Reward: -10.0
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.618
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-5.txt
+=========================================
+0 Time: 7.952
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.591
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.341
+2 Reward: -10.0
+2 Action: 1
+2 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-10.txt
+=========================================
+0 Time: 0.789
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 1.097
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.475
+2 Reward: -10.0
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.324
+3 Reward: -10.0
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.377
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 0.492
+5 Reward: -10.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 0.429
+6 Reward: -10.0
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 0.417
+7 Reward: -10.0
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 0.431
+8 Reward: -10.0
+8 Action: 1
+8 Objects: 0
+.
+9 Time: 0.419
+9 Reward: -10.0
+9 Action: 1
+9 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-10.txt
+=========================================
+0 Time: 2.378
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 2.169
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 2.003
+2 Reward: -19.055385138137417
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 2.634
+3 Reward: -19.055385138137417
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 2.959
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 2.536
+5 Reward: -10.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 2.861
+6 Reward: -19.055385138137417
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 3.324
+7 Reward: -19.055385138137417
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 2.694
+8 Reward: -19.055385138137417
+8 Action: 1
+8 Objects: 0
+.
+9 Time: 3.16
+9 Reward: -19.055385138137417
+9 Action: 1
+9 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-4_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-10.txt
+=========================================
+0 Time: 3.083
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 2.298
+1 Reward: -19.055385138137417
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 2.647
+2 Reward: -19.055385138137417
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 3.298
+3 Reward: -19.055385138137417
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 3.176
+4 Reward: -19.055385138137417
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 3.095
+5 Reward: -19.055385138137417
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 3.234
+6 Reward: -19.055385138137417
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 3.186
+7 Reward: -19.055385138137417
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 3.124
+8 Reward: -19.055385138137417
+8 Action: 1
+8 Objects: 0
+.
+9 Time: 3.107
+9 Reward: -19.055385138137417
+9 Action: 1
+9 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 0.824
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.5
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.594
+2 Reward: -10.0
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.567
+3 Reward: -10.0
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.44
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 0.438
+5 Reward: -10.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 0.416
+6 Reward: -10.0
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 0.415
+7 Reward: -10.0
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 0.404
+8 Reward: -10.0
+8 Action: 1
+8 Objects: 0
+.
+9 Time: 0.422
+9 Reward: -10.0
+9 Action: 1
+9 Objects: 0
+.
+10 Time: 0.436
+10 Reward: -10.0
+10 Action: 1
+10 Objects: 0
+.
+11 Time: 0.415
+11 Reward: -10.0
+11 Action: 1
+11 Objects: 0
+.
+12 Time: 0.433
+12 Reward: -10.0
+12 Action: 1
+12 Objects: 0
+.
+13 Time: 0.405
+13 Reward: -10.0
+13 Action: 1
+13 Objects: 0
+.
+14 Time: 0.414
+14 Reward: -10.0
+14 Action: 1
+14 Objects: 0
+.
+15 Time: 0.428
+15 Reward: -10.0
+15 Action: 1
+15 Objects: 0
+.
+16 Time: 0.401
+16 Reward: -10.0
+16 Action: 1
+16 Objects: 0
+.
+17 Time: 0.494
+17 Reward: -10.0
+17 Action: 1
+17 Objects: 0
+.
+18 Time: 0.483
+18 Reward: -10.0
+18 Action: 1
+18 Objects: 0
+.
+19 Time: 0.425
+19 Reward: -10.0
+19 Action: 1
+19 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 0.966
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.612
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.341
+2 Reward: -10.0
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.341
+3 Reward: -10.0
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.48
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-8_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 2.686
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 3.038
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 2.736
+2 Reward: -19.055385138137417
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 2.922
+3 Reward: -19.055385138137417
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 3.376
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 3.201
+5 Reward: -10.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 2.659
+6 Reward: -19.055385138137417
+6 Action: 1
+6 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.351
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.961
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.82
+2 Reward: -19.055385138137417
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.735
+3 Reward: -19.055385138137417
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.405
+4 Reward: -10.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 0.403
+5 Reward: -10.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 0.854
+6 Reward: -19.055385138137417
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 1.263
+7 Reward: -19.055385138137417
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 0.857
+8 Reward: -19.055385138137417
+8 Action: 1
+8 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 0.851
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.622
+1 Reward: -16.0
+1 Action: 1
+1 Objects: 0
+.
+2 Time: 0.577
+2 Reward: -16.0
+2 Action: 1
+2 Objects: 0
+.
+3 Time: 0.835
+3 Reward: -16.0
+3 Action: 1
+3 Objects: 0
+.
+4 Time: 0.751
+4 Reward: -16.0
+4 Action: 1
+4 Objects: 0
+.
+5 Time: 0.697
+5 Reward: -16.0
+5 Action: 1
+5 Objects: 0
+.
+6 Time: 0.659
+6 Reward: -16.0
+6 Action: 1
+6 Objects: 0
+.
+7 Time: 0.308
+7 Reward: -10.0
+7 Action: 1
+7 Objects: 0
+.
+8 Time: 0.303
+8 Reward: -10.0
+8 Action: 1
+8 Objects: 0
+.
+9 Time: 0.305
+9 Reward: -10.0
+9 Action: 1
+9 Objects: 0
+.
+10 Time: 0.67
+10 Reward: -16.0
+10 Action: 1
+10 Objects: 0
+.
+11 Time: 0.695
+11 Reward: -16.0
+11 Action: 1
+11 Objects: 0
+.
+12 Time: 0.312
+12 Reward: -10.0
+12 Action: 1
+12 Objects: 0
+.
+13 Time: 0.712
+13 Reward: -16.0
+13 Action: 1
+13 Objects: 0
+.
+14 Time: 0.35
+14 Reward: -10.0
+14 Action: 1
+14 Objects: 0
+.
+15 Time: 0.394
+15 Reward: -10.0
+15 Action: 1
+15 Objects: 0
+.
+16 Time: 0.334
+16 Reward: -10.0
+16 Action: 1
+16 Objects: 0
+.
+17 Time: 0.308
+17 Reward: -10.0
+17 Action: 1
+17 Objects: 0
+.
+18 Time: 0.316
+18 Reward: -10.0
+18 Action: 1
+18 Objects: 0
+.
+19 Time: 0.745
+19 Reward: -16.0
+19 Action: 1
+19 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 2.256
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 0.824
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 0.893
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.03
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.033
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.219
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-3_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.3
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-1_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.671
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.208
+0 Reward: 990.0
+0 Action: 2
+0 Objects: 1
+..
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-1_A-false_I-20.txt
+=========================================
+0 Time: 1.323
+0 Reward: 990.0
+0 Action: 2
+0 Objects: 1
+..
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 5.224
+0 Reward: 931.0
+0 Action: 7
+0 Objects: 1
+.......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 4.95
+0 Reward: 941.0
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 6.725
+0 Reward: 906.6649125089075
+0 Action: 9
+0 Objects: 1
+.........
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 9.827
+0 Reward: 916.6649125089075
+0 Action: 8
+0 Objects: 1
+........
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 5.847
+0 Reward: 931.0
+0 Action: 7
+0 Objects: 1
+.......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 4.187
+0 Reward: 941.0
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 5.775
+0 Reward: 941.7639320225002
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_R-true_Rs1000_C-999_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 5.02
+0 Reward: 941.7639320225002
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_C-searchRoom_O-1_A-1.0_Sdv-.001_V-1_H-25_SS-10000_MA-10_Ps-0_L-0_A-false_I-1.txt
+=========================================
+0 Time: 6.801
+0 Reward: 941.7639320225002
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_L-0_I-1.txt
+=========================================
+0 Time: 5.226
+0 Reward: 941.0
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_L-0_I-1.txt
+=========================================
+0 Time: 6.664
+0 Reward: 941.0
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_L-0_I-1.txt
+=========================================
+0 Time: 8.691
+0 Reward: 941.7639320225002
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1,1,1,1_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-0,1,2,3_I-2.txt
+=========================================
+0 Time: 2.056
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 1.765
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 2.084
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 1.574
+1 Reward: -19.055385138137417
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-1,1,1_SS-10000_MA-25_M-arthur_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-1_I-2.txt
+=========================================
+0 Time: 19.02
+0 Reward: 2884.9446148618626
+0 Action: 12
+0 Objects: 3
+............
+TestRun__S-Pomcp_O-1,1,1_SS-10000_MA-25_M-arthur_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-1_I-2.txt
+=========================================
+0 Time: 18.089
+0 Reward: 2864.5857864376267
+0 Action: 14
+0 Objects: 3
+..............
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 15.971
+0 Reward: 818.9446148618626
+0 Action: 15
+0 Objects: 1
+...............
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-2_I-1.txt
+=========================================
+0 Time: 1.927
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-2_I-1.txt
+=========================================
+0 Time: 2.148
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-25_M-arthur_A-1.0_Sdv-.001_V-1_Ad-true_Ps-.05_Lc-2_I-1.txt
+=========================================
+0 Time: 33.349
+0 Reward: 686.9446148618626
+0 Action: 25
+0 Objects: 1
+.........................
+TestRun__S-Pomcp_O-2_SS-10000_MA-25_M-arthur_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 6.583
+0 Reward: 1942.9446148618626
+0 Action: 6
+0 Objects: 2
+......
+TestRun__S-Pomcp_O-2_SS-1000_MA-25_M-A_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 2.447
+0 Reward: -452.816653826392
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-2_SS-1000_MA-25_M-A_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 2.183
+0 Reward: 0.0
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-2_SS-1000_MA-150_M-A_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 9.19
+0 Reward: 0.0
+0 Action: 150
+0 Objects: 0
+......................................................................................................................................................
+TestRun__S-Pomcp_O-2_SS-1000_MA-150_M-arthur_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 7.044
+0 Reward: 0.0
+0 Action: 150
+0 Objects: 0
+......................................................................................................................................................
+TestRun__S-Pomcp_O-2_SS-1000_MA-20_M-arthur_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.544
+0 Reward: 0.0
+0 Action: 20
+0 Objects: 0
+....................
+TestRun__S-Pomcp_O-2_SS-1000_MA-20_M-arthur_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.471
+0 Reward: 0.0
+0 Action: 20
+0 Objects: 0
+....................
+TestRun__S-Pomcp_O-2_SS-1000_MA-20_M-arthur_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.475
+0 Reward: 0.0
+0 Action: 20
+0 Objects: 0
+....................
+TestRun__S-Pomcp_O-2_SS-1000_MA-20_M-arthur_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.33
+0 Reward: 0.0
+0 Action: 20
+0 Objects: 0
+....................
+TestRun__S-Pomcp_O-1_SS-10000_MA-20_M-arthur_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 19.594
+0 Reward: 870.0
+0 Action: 19
+0 Objects: 1
+...................
+TestRun__S-Pomcp_O-1_SS-10000_MA-20_M-A_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 78.378
+0 Reward: -250.82012545433426
+0 Action: 20
+0 Objects: 0
+....................
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-A_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 441.753
+0 Reward: -563.628521351889
+0 Action: 130
+0 Objects: 1
+..................................................................................................................................
+TestRun__S-Pomcp_O-1_SS-10_MA-150_M-B_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.284
+0 Reward: -2090.0834800569914
+0 Action: 150
+0 Objects: 0
+......................................................................................................................................................
+TestRun__S-Pomcp_O-1_SS-10_MA-1_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.019
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.041
+0 Reward: 965.0
+0 Action: 4
+0 Objects: 1
+....
+TestRun__S-Pomcp_O-1_SS-10_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.039
+0 Reward: 927.5857864376269
+0 Action: 7
+0 Objects: 1
+.......
+TestRun__S-Pomcp_O-1_SS-10_MA-10_M-toy_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.034
+0 Reward: 965.0
+0 Action: 4
+0 Objects: 1
+....
+TestRun__S-Pomcp_O-1_SS-10_MA-1_M-toy_A-1.0_Sdv-.001_V-3_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.02
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10_MA-1_M-toy_A-1.0_Sdv-.001_V-3_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.009
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10000_MA-1_M-rasputin_A-1.0_Sdv-.001_V-4_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 3.589
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-rasputin_A-1.0_Sdv-.001_V-3_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 275.191
+0 Reward: -439.60289488741955
+0 Action: 116
+0 Objects: 1
+....................................................................................................................
+TestRun__S-Pomcp_O-5_SS-10000_MA-150_M-baxter_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 121.745
+0 Reward: 3879.0583180952335
+0 Action: 93
+0 Objects: 5
+.............................................................................................
+TestRun__S-Pomcp_O-5_SS-10000_MA-150_M-baxter_A-1.0_Sdv-.001_V-5_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 22.766
+0 Reward: 4907.834474939404
+0 Action: 12
+0 Objects: 5
+............
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 4.892
+0 Reward: 950.9446148618625
+0 Action: 5
+0 Objects: 1
+.....
+1 Time: 18.06
+1 Reward: 778.9446148618626
+1 Action: 19
+1 Objects: 1
+...................
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 14.785
+0 Reward: 864.9446148618626
+0 Action: 12
+0 Objects: 1
+............
+1 Time: 5.441
+1 Reward: 950.9446148618625
+1 Action: 5
+1 Objects: 1
+.....
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 13.552
+0 Reward: 854.9446148618626
+0 Action: 13
+0 Objects: 1
+.............
+1 Time: 6.052
+1 Reward: 950.9446148618625
+1 Action: 5
+1 Objects: 1
+.....
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 6.229
+0 Reward: 940.9446148618625
+0 Action: 6
+0 Objects: 1
+......
+1 Time: 7.788
+1 Reward: 940.9446148618625
+1 Action: 6
+1 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 20.119
+0 Reward: 874.9446148618626
+0 Action: 11
+0 Objects: 1
+...........
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 20.052
+0 Reward: 806.9446148618626
+0 Action: 17
+0 Objects: 1
+.................
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 10.032
+0 Reward: 902.9446148618626
+0 Action: 9
+0 Objects: 1
+.........
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 14.566
+0 Reward: 864.9446148618626
+0 Action: 12
+0 Objects: 1
+............
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 6.688
+0 Reward: 950.9446148618625
+0 Action: 5
+0 Objects: 1
+.....
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 17.377
+0 Reward: 806.9446148618626
+0 Action: 17
+0 Objects: 1
+.................
+1 Time: 1.447
+1 Reward: 990.0
+1 Action: 2
+1 Objects: 1
+..
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-2.txt
+=========================================
+0 Time: 1.105
+0 Reward: 990.0
+0 Action: 2
+0 Objects: 1
+..
+1 Time: 1.804
+1 Reward: 970.9446148618625
+1 Action: 3
+1 Objects: 1
+...
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-true_Ps-0_Lc-1_I-2.txt
+=========================================
+0 Time: 4.362
+0 Reward: -1049.0553851381374
+0 Action: 5
+0 Objects: -1
+.....
+1 Time: 3.633
+1 Reward: -1067.0553851381374
+1 Action: 6
+1 Objects: -1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-150_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-2.txt
+=========================================
+0 Time: 2.925
+0 Reward: 960.9446148618625
+0 Action: 4
+0 Objects: 1
+....
+1 Time: 0.747
+1 Reward: 990.0
+1 Action: 2
+1 Objects: 1
+..
+TestRun__S-Pomcp_O-1_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 0.73
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10000_MA-2_M-A_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 3.273
+0 Reward: -35.62049935181331
+0 Action: 2
+0 Objects: 0
+..
+TestRun__S-Pomcp_O-1_SS-10000_MA-2_M-A_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 2.343
+0 Reward: -32.72792206135786
+0 Action: 2
+0 Objects: 0
+..
+TestRun__S-Pomcp_O-1_SS-10000_MA-2_M-A_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 3.577
+0 Reward: -30.440306508910552
+0 Action: 2
+0 Objects: 0
+..
+TestRun__S-Pomcp_O-1_SS-10000_MA-2_M-B_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 3.397
+0 Reward: -27.61577310586391
+0 Action: 2
+0 Objects: 0
+..
+TestRun__S-Random_O-2_SS-10000_MA-2_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 0.166
+0 Reward: -29.055385138137417
+0 Action: 2
+0 Objects: 0
+..
+1 Time: 0.081
+1 Reward: -37.05538513813742
+1 Action: 2
+1 Objects: 0
+..
+TestRun__S-Pomcp_O-2_SS-10000_MA-2_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-2.txt
+=========================================
+0 Time: 4.571
+0 Reward: 980.0
+0 Action: 3
+0 Objects: 1
+...
+1 Time: 2.368
+1 Reward: -20.0
+1 Action: 2
+1 Objects: 0
+..
+TestRun__S-Random_O-2_SS-10000_MA-150_M-A_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.0
+0 Reward: 0.0
+0 Action: 0
+0 Objects: 0
+
+TestRun__S-Random_O-2_SS-10000_MA-150_M-A_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 4.845
+0 Reward: -3422.7245502204905
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-D_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 3.412
+0 Reward: -3222.833287209052
+0 Action: 90
+0 Objects: -2
+..........................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-D_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 5.211
+0 Reward: -3152.58747607936
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-C_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 4.749
+0 Reward: -3229.1776442361256
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-C_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 4.725
+0 Reward: -3443.970815504744
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-C_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 2.432
+0 Reward: -2647.148850834964
+0 Action: 43
+0 Objects: -2
+...........................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-C_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 5.044
+0 Reward: -3411.7720521575343
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Random_O-2_SS-10000_MA-150_M-C_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 4.91
+0 Reward: -3292.998420483809
+0 Action: 150
+0 Objects: -1
+......................................................................................................................................................
+TestRun__S-Pomcp_O-1_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.817
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.77
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-1_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.482
+0 Reward: 1000.0
+0 Action: 1
+0 Objects: 1
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.883
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.92
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 0.954
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 1.334
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 2.105
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-1.txt
+=========================================
+0 Time: 1.482
+0 Reward: 1000.0
+0 Action: 1
+0 Objects: 1
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.771
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.501
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.902
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.022
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.225
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.267
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.851
+1 Reward: -15.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.944
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.837
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.883
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.918
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-false_Ps-.05_Lc-1_I-2.txt
+=========================================
+0 Time: 1.846
+0 Reward: -15.0
+0 Action: 1
+0 Objects: 0
+.
+1 Time: 0.735
+1 Reward: -10.0
+1 Action: 1
+1 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-2_Ad-false_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 1.688
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-arthur_A-1.0_Sdv-.001_V-2_Ad-true_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 2.505
+0 Reward: -19.055385138137417
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-true_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 0.864
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-1_M-toy_A-1.0_Sdv-.001_V-2_Ad-true_Ps-0_Lc-1_I-1.txt
+=========================================
+0 Time: 0.881
+0 Reward: -10.0
+0 Action: 1
+0 Objects: 0
+.
+TestRun__S-Pomcp_O-2_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-true_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 27.591
+0 Reward: -306.4291736865225
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 6.35
+0 Reward: 942.9289321881345
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 11.291
+0 Reward: 875.1887469897314
+0 Action: 11
+0 Objects: 1
+...........
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 25.742
+0 Reward: -28.605551275463988
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 12.216
+0 Reward: 875.1887469897314
+0 Action: 11
+0 Objects: 1
+...........
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 6.469
+0 Reward: 933.362338984404
+0 Action: 6
+0 Objects: 1
+......
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 9.598
+0 Reward: 886.724677968808
+0 Action: 9
+0 Objects: 1
+.........
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 24.809
+0 Reward: -312.3606797749979
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 24.607
+0 Reward: -272.3606797749979
+0 Action: 25
+0 Objects: 0
+.........................
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 19.848
+0 Reward: 705.7407945831815
+0 Action: 21
+0 Objects: 1
+.....................
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 8.133
+0 Reward: 916.0250532910186
+0 Action: 8
+0 Objects: 1
+........
+TestRun__S-Pomcp_O-1_SS-10000_MA-25_M-robot_A-1.0_Sdv-.001_V-1_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 8.929
+0 Reward: 913.6408263968825
+0 Action: 9
+0 Objects: 1
+.........

@@ -1,0 +1,7 @@
+OOPOMCP_A_Objects1.0__S-Pomcp_O-2_SS-10000_MA-1_M-A_A-1.0_Sdv-.001_V-3_Ad-false_Ps-0_Lc-0_I-1.txt
+=========================================
+0 Time: 3.066
+0 Reward: -23.41640786499874
+0 Action: 1
+0 Objects: 0
+.
