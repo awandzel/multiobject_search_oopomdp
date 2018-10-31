@@ -24,7 +24,6 @@ import searchWorld.src.Pomcp.Location;
 import searchWorld.src.Pomdp.sensorModel;
 import searchWorld.src.Model.SearchRF;
 import searchWorld.src.Model.SearchTF;
-import searchWorld.src.Pomdp.locationInVisionCone;
 import searchWorld.src.State.Rooms;
 import searchWorld.src.State.SearchObject;
 import searchWorld.src.State.SearchState;
