@@ -1,30 +1,117 @@
+'''
+    Created by awandzel on 10/30/18.
+'''
+
 import numpy as np
+import Multi_Object_Search.Pomdp.Location as utils
 
 #Environment Constants
-E = -1 #empty
-W = -2 #wall
-X = -3 #room center
-Y = -4 #map center
-U = -5 #uncertain
+E = EMPTY = -1
+W = WALL = -2
+X = ROOMCENTER = -3
+Y = MAPCENTER = -4
+U = UNCERTAIN = -5
 
-class environmentMaps():
-    def __init__(self, occupancy, semantic):
-        self.occupancyMap = occupancy
-        self.semanticMap = semantic
-        self.beliefMap = np.zeros([len(occupancy), len(occupancy[0])])
+#Rotate maps so as to be vertically readable
+def rotateToRight(m):
+    t = np.zeros([len(m), len(m[0])])
+    for x in range(len(m)):
+        for y in range(len(m[0])):
+            t[x][y] = m[len(m) - y - 1][x]
+    return t
 
-def printMap(map):
-    print(np.matrix(map))
-
-def printMaps(maps):
-    print("\nOccupancy Map: \n", np.matrix(maps.occupancyMap))
-    print("\nSemantic Map: \n", np.matrix(maps.semanticMap))
-    print("\nBelief Map: \n", np.matrix(maps.beliefMap))
 
 def selectMap(mapRef):
     if mapRef == "small":
-        return environmentMaps(smallOccupancy, smallSemantic)
+        return environmentMaps(mapRef, smallOccupancy, smallSemantic)
+    else:
+        raise Exception("Error: Map not found")
 
+# ////////////////////////////////////////////////////
+#//////////////////// MAPS ///////////////////////////
+# ////////////////////////////////////////////////////
+class environmentMaps():
+    numberOfUncertainLocations = 0
+
+    def __init__(self, mapRef, occupancy, semantic):
+        self.name = mapRef
+        self.occupancyMap = rotateToRight(occupancy)
+        self.semanticMap = rotateToRight(semantic)
+        self.beliefMap = np.zeros([len(semantic), len(semantic[0])])
+
+        # builds map of all uncertain locations = spaces in rooms (excluding mapcenter)
+        for x in range(len(semantic)):
+            for y in range(len(semantic[x])):
+                if semantic[x][y] > EMPTY and occupancy[x][y] != MAPCENTER:
+                    self.numberOfUncertainLocations += 1
+                    self.beliefMap[x][y] = UNCERTAIN
+
+    def debugPrint(self):
+        print("=========Maps=========")
+        print("\nOccupancy Map: \n", np.matrix(self.occupancyMap))
+        print("\nSemantic Map: \n", np.matrix(self.semanticMap))
+        print("\nBelief Map: \n", np.matrix(self.beliefMap))
+
+# ////////////////////////////////////////////////////
+#//////////////////// ROOMS //////////////////////////
+# ////////////////////////////////////////////////////
+class roomsInMap():
+    numberOfRooms = 0
+    transitionMatrix = {}
+    agentToRoomMapping = {}
+    roomToLocationMapping = {}
+    adjacencyMatrix = [[]]
+
+    # maps room number to center
+    def setTransitionMatrix(self, Maps):
+        for x in range(len(Maps.occupancyMap)):
+            for y in range(len(Maps.occupancyMap[x])):
+                if (Maps.occupancyMap[x][y] == ROOMCENTER or Maps.occupancyMap[x][y] == MAPCENTER):
+                    self.transitionMatrix[Maps.semanticMap[x][y]] = utils.Location(x, y)
+
+        self.numberOfRooms = len(self.transitionMatrix) - 1 #exclude center
+
+    # room adjacency graph
+    def setAdjacencyMatrix(self, Maps):
+        if Maps.name == "small":
+            self.adjacencyMatrix = [
+                [False, True, False, True, False],
+                [True, False, True, False, False],
+                [False, True, False, True, False],
+                [True, False, True, False, False],
+                [False, False, False, False, False],
+            ]
+
+    # mapping from rooms to locations and locations to rooms
+    def setMappings(self, Maps):
+        for x in range(len(Maps.semanticMap)):
+            for y in range(len(Maps.semanticMap[x])):
+                if Maps.semanticMap[x][y] > EMPTY:
+                    self.agentToRoomMapping[utils.Location(x,y)] = Maps.semanticMap[x][y]
+                    if Maps.semanticMap[x][y] not in self.roomToLocationMapping:
+                        self.roomToLocationMapping[Maps.semanticMap[x][y]] = []
+                    self.roomToLocationMapping[Maps.semanticMap[x][y]].append(utils.Location(x, y))
+
+    # returns rooms connected to #index room
+    def connectedRooms(self, index):
+        connected = []
+        for i in range(len(self.adjacencyMatrix[index])):
+            if self.adjacencyMatrix[index][i]:
+                connected.append(i)
+        return connected
+
+    def debugPrint(self):
+        print("=========Rooms=========")
+        for i in range(self.numberOfRooms):
+            connected = self.connectedRooms(i)
+            print("\nRoom" + str(i) + " center: " + str(self.transitionMatrix[1]) +
+                  "\nRoom" + str(i) + " is connected to:")
+            for j in connected:
+                print(" " + str(j))
+
+# ////////////////////////////////////////////////////
+#//////////////////// MAPS ///////////////////////////
+# ////////////////////////////////////////////////////
 smallOccupancy = [
           [E, E, 1, E, E, E, E, E, E, E, E],
           [0, X, E, E, E, E, E, E, E, X, E],
