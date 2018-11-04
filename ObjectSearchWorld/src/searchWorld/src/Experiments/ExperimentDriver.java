@@ -375,12 +375,12 @@ Objects: 5
         objDistribution.objectDistribution = new HashMap<>(objDistribution.belief);
       }
 
-      if (printAgentInteraction > 1) {
-        System.out.println("////////////////////BeliefDistribution////////////////////");
-        objDistribution.printHeatMap(objDistribution.belief, false, null);
-        System.out.println("\n////////////////////ObjectDistribution////////////////////");
-        objDistribution.printHeatMap(objDistribution.objectDistribution, false, null);
-      }
+                    if (printAgentInteraction > 1) {
+                      System.out.println("////////////////////BeliefDistribution////////////////////");
+                      objDistribution.printHeatMap(objDistribution.belief, false, null);
+                      System.out.println("\n////////////////////ObjectDistribution////////////////////");
+                      objDistribution.printHeatMap(objDistribution.objectDistribution, false, null);
+                    }
       //////////////////////////////OBJECT SELECTION///////////////////////////////////
       //
       //////////////////////////////OBJECT SELECTION///////////////////////////////////
@@ -405,10 +405,10 @@ Objects: 5
         }
         for (Integer g : GOALS.keySet())
           if (g > GOALS.keySet().size()) throw new RuntimeException("Objects must be sequentially specified");
-        if (numberOfObjects != GOALS.size()) throw new RuntimeException("Number of objects must match what is on map");
-      }
+        if (numberOfObjects != GOALS.size()) throw new RuntimeException("Number of objects must match what is on map ");
+    }
 
-      if (issueNoUncertainityPOMCP) {
+    if (issueNoUncertainityPOMCP) {
         if (e == 0) System.out.println("CERTAIN OOPOMCP IS BEING RUN");
 
         objDistribution.belief = objDistribution.makeUniformHeatMap();

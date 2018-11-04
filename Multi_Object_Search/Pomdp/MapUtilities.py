@@ -2,18 +2,14 @@
     Created by awandzel on 10/31/18.
 '''
 
-import Multi_Object_Search.Pomdp.Location as pomdp
+import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 import Multi_Object_Search.Core.Environment as env
 
 class mapUtilities:
-    def __init__(self, Maps, Rooms, RRT, visionDepth):
+    def __init__(self, Maps, Rooms=None, RRT=None):
         self.Maps = Maps
         self.Rooms = Rooms
         self.RRT = RRT
-        self.visionDepth = visionDepth
-
-    def __init__(self, Maps):
-        self.Maps = Maps
 
     def isConflictInCardinalDirections(self, currentLocation):
         for i in range(4):

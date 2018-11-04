@@ -6,7 +6,7 @@ import numpy as np
 import copy
 import time
 import math
-import Multi_Object_Search.Pomdp.Location as pomdp
+import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 import Multi_Object_Search.Core.Environment as env
 from simple_rl.tasks import GridWorldMDP
 from simple_rl.planning.ValueIterationClass import ValueIteration

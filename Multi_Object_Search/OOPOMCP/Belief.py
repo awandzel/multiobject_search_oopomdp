@@ -2,13 +2,13 @@
     Created by awandzel on 11/01/18.
 '''
 import Multi_Object_Search.Core.Environment as env
-import Multi_Object_Search.Pomdp.Location as pomdp
+import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 import numpy as np
 import copy
 
 class belief:
     b = {}
-    objectDistribution = {} #for sampling object locations (off of the belief)
+    objectDistributions = {} #for sampling object locations (off of the belief)
 
     def __init__(self, Maps, numberOfObjects, beliefRn):
         self.Maps = Maps

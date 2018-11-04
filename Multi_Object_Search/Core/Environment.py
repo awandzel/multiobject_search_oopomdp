@@ -3,7 +3,7 @@
 '''
 
 import numpy as np
-import Multi_Object_Search.Pomdp.Location as pomdp
+import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 
 #Environment Constants
 E = EMPTY = -1
@@ -51,6 +51,37 @@ class environmentMaps():
                 if semantic[x][y] > EMPTY and occupancy[x][y] != MAPCENTER:
                     self.numberOfUncertainLocations += 1
                     self.beliefMap[x][y] = UNCERTAIN
+
+    def sampleObjectLocations(self, objectDistributions, objectRn, numberOfObjects):
+        Objects = {}
+        for o in range(numberOfObjects):
+            Objects[o] = self.sampleObjectLocation(objectDistributions[o], objectRn)
+        return Objects
+
+    def sampleObjectLocation(self, objectDistribution, objectRn):
+        curSum = 0.
+        roll = objectRn.random()
+        for l in objectDistribution:
+            curSum += objectDistribution[l]
+            if (roll <= curSum):
+                return pomdp.Location(l.x,l.y)
+        raise Exception("Probabilities don't sum to 1.0: " + str(curSum))
+
+
+    def extractObjectLocations(self, numberOfObjects):
+        Objects = {}
+        for x in range(len(self.occupancyMap)):
+            for y in range(len(self.occupancyMap[x])):
+                if self.occupancyMap[x][y] > EMPTY:
+                    objectId = self.occupancyMap[x][y]
+                    if objectId in Objects: raise Exception("No duplicate objects allowed")
+                    Objects[objectId] = pomdp.Location(x,y)
+
+        for obj in Objects:
+            if obj > len(Objects): raise Exception("Objects must be sequentially specified")
+        if numberOfObjects != len(Objects): raise Exception("Number of objects must match what is on map")
+
+        return Objects
 
     def debugPrint(self):
         print("=========Maps=========")

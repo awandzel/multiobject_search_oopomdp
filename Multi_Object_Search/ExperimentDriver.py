@@ -2,14 +2,19 @@
     Created by awandzel on 10/29/18.
 '''
 
-import random
 import copy
+import random
+
 import click  # Command Line Interface Creation Kit
+
 import Multi_Object_Search.Core.Environment as envMap
-import Multi_Object_Search.Core.RRT as RRT
-import Multi_Object_Search.Core.mapUtilities as Util
-import Multi_Object_Search.OOPOMCP.belief as Belief
 import Multi_Object_Search.Core.LanguageCommand as LanguageCommand
+import Multi_Object_Search.Core.RRT as RRT
+import Multi_Object_Search.OOPOMCP.Belief as Belief
+import Multi_Object_Search.Pomdp.MapUtilities as Util
+import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
+import Multi_Object_Search.MultiObjectSearchDriver as SearchDriver
+
 
 @click.command()
 @click.option('--exp', required=True, type=str, help='Name of experiment')
@@ -25,7 +30,7 @@ import Multi_Object_Search.Core.LanguageCommand as LanguageCommand
 @click.option('--psi', required=True, type=float, help='Psi language error')
 @click.option('--itr', required=True, type=int, help='Number of experiment iterations')
 
-#Example: experimentDriver.py --exp=test --mem=2 --mem2=0 --sam=10000 --act=10 --map=arthur --obs=1.0 --sdv=.0001 --dep=2 --adv=False --psi=0 --itr=1
+#Example: ExperimentDriver.py --exp=test --mem=2 --cmd="Please find the mugs in the kitchen" --sam=10000 --act=10 --map=arthur --obs=1.0 --sdv=.0001 --dep=2 --adv=False --psi=0 --itr=1
 
 def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr):
     fileName = exp + "__" + "Mo-" + mem + "_Mc-" + cmd + "_S-" + str(sam) + "_A-" + str(act) \
@@ -37,17 +42,19 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     # //////////////////////////////////////////////////////////////////////////////////////
     # ////////////////////////////// PARAMETERS ////////////////////////////////////////////
     # //////////////////////////////////////////////////////////////////////////////////////
-
     #POMCP parameters
     pomcpHeight = 25
     pomcpReinvigorate = True
     pomcpReinvigorateSamples = 1000
     pomcpExploration = 999
     pomcpDiscount = .95
+    PomcpParameters = pomdp.PomcpParmeters(sam, act,
+        pomcpHeight, pomcpReinvigorate, pomcpReinvigorateSamples, pomcpExploration, pomcpDiscount)
 
     #POMDP parameters
     objectReward = 1000
-    actionReward = -10
+    actionCost = -10
+    PomdpParameters = pomdp.PompdParameters(objectReward, actionCost)
 
     #Observation model parameters (V in visionCone / NV not in visionCone
     betaV = (1.0 - obs) / 2.0
@@ -56,10 +63,13 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     betaNV = (1.0 - obs) / 2.0
     gammaNV = obs
     alphaNV = (1.0 - obs) / 2.0
+    ObservationModelParameters = pomdp.ObservationModelParameters(obs, sdv, dep,
+        betaV, gammaV, alphaV, betaNV, gammaNV, alphaNV)
+    LanguageParameters = pomdp.LanguageParameters(adv, psi)
 
     #-----------Program------------
     #set true if manually specifying goal location via map
-    manualMapSpecification = True
+    manualMapSpecification = False
     ROBOTEXPERIMENT = False
 
     #-----------RRT------------
@@ -67,6 +77,8 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
 
     #-----------Debug----------
     debugPrintOuts = 4 #{0:none, 1:env steps, 2:belief, 3:RRT, 4:other}
+
+    #visualizes selected actions of agent for task
     issuePomdpVisualizer = True
 
     #sets random seed constant for goal placement & RRT nodes.
@@ -158,9 +170,9 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
         #Adversarial: object distribution is anti-belief
         if adv:
             languageCommand.translateToObservation(1.0 - psi)
-            belief.objectDistribution = languageCommand.beliefUpdate(beliefPrior)
+            belief.objectDistributions = languageCommand.beliefUpdate(beliefPrior)
         else:
-            belief.objectDistribution = copy.deepcopy(belief.b)
+            belief.objectDistributions = copy.deepcopy(belief.b)
 
         if debugPrintOuts > 1:
             print("\n////////////////////////////////////////////////////////" +
@@ -170,23 +182,39 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
             print("\n//////////////////////////////////////////////////////////" +
                   "\n////////////////////ObjectDistribution////////////////////" +
                   "\n////////////////////////////////////////////////////////")
-            belief.debugPrint(belief.objectDistribution)
+            belief.debugPrint(belief.objectDistributions)
 
+        # //////////////////////////////OBJECT SELECTION///////////////////////////////////
+        # //
+        # //////////////////////////////OBJECT SELECTION///////////////////////////////////
+        Objects = {}
+        if (not manualMapSpecification):
+            Objects = Maps.sampleObjectLocations(belief.objectDistributions, objectRn, numberOfObjects)
+        else:
+            Objects = Maps.extractObjectLocations(numberOfObjects)
 
+        if issueNoUncertainityPOMCP:
+            for o in Objects:
+                for l in belief.b[o]:
+                    belief.b[o][l] = 1.0 if l == Objects[o] else 0.0
 
-
-
-
-
-
-
-
-
+        #//----------------------------Experiment------------------------------------
+        SearchDriver.executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph,
+                                              PomcpParameters, PomdpParameters, ObservationModelParameters, LanguageParameters,
+                                              startState, POMCPRn, observationRn, ROBOTEXPERIMENT, debugPrintOuts)
 
 
 
 if __name__ == '__main__':
     experimentDriver()
+
+
+
+
+
+
+
+
 
 
 
