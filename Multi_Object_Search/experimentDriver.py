@@ -3,15 +3,18 @@
 '''
 
 import random
+import copy
 import click  # Command Line Interface Creation Kit
 import Multi_Object_Search.Core.Environment as envMap
 import Multi_Object_Search.Core.RRT as RRT
 import Multi_Object_Search.Core.mapUtilities as Util
+import Multi_Object_Search.OOPOMCP.belief as Belief
+import Multi_Object_Search.Core.LanguageCommand as LanguageCommand
 
 @click.command()
 @click.option('--exp', required=True, type=str, help='Name of experiment')
 @click.option('--mem', required=True, type=str, help='Class-object membership (e.g. \'1,2,1\' 3 classes of 1,2,1 objects)')
-@click.option('--mem2', required=True, type=str, help='Class-room membership (e.g. \'0,1,2\' 3 classes in 0,1,2 rooms)')
+@click.option('--cmd', required=True, type=str, help='Language command e.g. "Please find the mugs in the kitchen and books in the library or kitchen"')
 @click.option('--sam', required=True, type=int, help='Number of Monte-Carlo samples')
 @click.option('--act', required=True, type=int, help='Max number of actions')
 @click.option('--map', required=True, type=str, help='Name of map')
@@ -24,8 +27,8 @@ import Multi_Object_Search.Core.mapUtilities as Util
 
 #Example: experimentDriver.py --exp=test --mem=2 --mem2=0 --sam=10000 --act=10 --map=arthur --obs=1.0 --sdv=.0001 --dep=2 --adv=False --psi=0 --itr=1
 
-def experimentDriver(exp, mem, mem2, sam, act, map, obs, sdv, dep, adv, psi, itr):
-    fileName = exp + "__" + "Mo-" + mem + "_Mc-" + mem2 + "_S-" + str(sam) + "_A-" + str(act) \
+def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr):
+    fileName = exp + "__" + "Mo-" + mem + "_Mc-" + cmd + "_S-" + str(sam) + "_A-" + str(act) \
                + "_M-" + map + "_Oa-" + str(obs) + "_Os-" + str(sdv) + "_D-" + str(dep) + "_Ad-" + str(adv) \
                + "_P-" + str(psi) + ".txt";
     #omit itr for aggregating over iterations
@@ -60,7 +63,7 @@ def experimentDriver(exp, mem, mem2, sam, act, map, obs, sdv, dep, adv, psi, itr
     ROBOTEXPERIMENT = False
 
     #-----------RRT------------
-    numberOfSecondsForRRTSamples = 10
+    numberOfSecondsForRRTSamples = 0
 
     #-----------Debug----------
     debugPrintOuts = 4 #{0:none, 1:env steps, 2:belief, 3:RRT, 4:other}
@@ -81,7 +84,7 @@ def experimentDriver(exp, mem, mem2, sam, act, map, obs, sdv, dep, adv, psi, itr
     #//----------------------------Set Randomness------------------------------------
     POMCPRn = random.Random(0) if algorithmConsistency else random.Random()
     observationRn = random.Random(0) if algorithmConsistency else random.Random()
-    objDistraRn = random.Random(0) if algorithmConsistency else random.Random()
+    beliefRn = random.Random(0) if algorithmConsistency else random.Random()
 
     objectRn = random.Random(0) if preprocessingConsistency else random.Random()
     languageRn = random.Random(0) if preprocessingConsistency else random.Random()
@@ -104,11 +107,9 @@ def experimentDriver(exp, mem, mem2, sam, act, map, obs, sdv, dep, adv, psi, itr
 
     # //----------------------------Parse Classes------------------------------------
     objectClasses = [int(s) for s in mem.split(",")]
-    roomClasses = [int(s) for s in mem2.split(",")]
     numberOfObjects = sum(objectClasses)
 
     #TODO: reobotexperiment should be uniform for language
-    #TODO: robotexperiment should create cost map for movements
     #TODO: python map starts at 0 for object/rooms
 
     #//////////////////////////////RRT///////////////////////////////////
@@ -121,14 +122,62 @@ def experimentDriver(exp, mem, mem2, sam, act, map, obs, sdv, dep, adv, psi, itr
         locationsInRoom = []
         #extra careful with move locations for live robot experiments
         if ROBOTEXPERIMENT:
-            for l in Rooms.roomToLocationMapping[i]:
+            for l in Rooms.roomToLocationsMapping[i]:
                 if not utilities.isConflictInCardinalDirections(l):
                     locationsInRoom.append(l)
         else:
-            locationsInRoom = Rooms.roomToLocationMapping[i]
+            locationsInRoom = Rooms.roomToLocationsMapping[i]
 
         centerOfRoom = Rooms.transitionMatrix[i]
         rrtGraph.buildGraph(centerOfRoom, locationsInRoom, dep, numberOfSecondsForRRTSamples)
+
+    if debugPrintOuts > 2:
+        rrtGraph.debugPrint()
+
+    #//////////////////////////////EXPERIMENT DRIVER///////////////////////////////////
+    #//
+    #//////////////////////////////EXPERIMENT DRIVER///////////////////////////////////
+    for e in range(itr):
+        print("\n===============================================\n" +
+              "-----------------Experiment:" + str(e) + "------------------" +
+              "\n===============================================\n")
+
+        # //////////////////////////////LANGUAGE COMMAND///////////////////////////////////
+        # //
+        # //////////////////////////////LANGUAGE COMMAND///////////////////////////////////
+        belief = Belief.belief(Maps, numberOfObjects, beliefRn)
+        beliefPrior = belief.makeUniformBelief()
+
+        belief.debugPrint(beliefPrior)
+
+        languageCommand = LanguageCommand.LanguageCommand(Rooms, objectClasses)
+        languageCommand.parseLanguageCommand(cmd, languageRn)
+        languageCommand.translateToObservation(psi)
+
+        belief.b = languageCommand.beliefUpdate(beliefPrior)
+        #Adversarial: object distribution is anti-belief
+        if adv:
+            languageCommand.translateToObservation(1.0 - psi)
+            belief.objectDistribution = languageCommand.beliefUpdate(beliefPrior)
+        else:
+            belief.objectDistribution = copy.deepcopy(belief.b)
+
+        if debugPrintOuts > 1:
+            print("\n////////////////////////////////////////////////////////" +
+                  "\n////////////////////BeliefDistribution////////////////////" +
+                  "\n////////////////////////////////////////////////////////")
+            belief.debugPrint(belief.b)
+            print("\n//////////////////////////////////////////////////////////" +
+                  "\n////////////////////ObjectDistribution////////////////////" +
+                  "\n////////////////////////////////////////////////////////")
+            belief.debugPrint(belief.objectDistribution)
+
+
+
+
+
+
+
 
 
 

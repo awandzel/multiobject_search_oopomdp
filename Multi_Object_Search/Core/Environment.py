@@ -3,7 +3,7 @@
 '''
 
 import numpy as np
-import Multi_Object_Search.Pomdp.Location as utils
+import Multi_Object_Search.Pomdp.Location as pomdp
 
 #Environment Constants
 E = EMPTY = -1
@@ -20,6 +20,12 @@ def rotateToRight(m):
             t[x][y] = m[len(m) - y - 1][x]
     return t
 
+def rotateToLeft(m):
+    t = np.zeros([len(m), len(m[0])])
+    for x in range(len(m)):
+        for y in range(len(m[0])):
+            t[len(m) - 1 - x][len(m) - 1 - y] = m[len(m) - 1 - y][x]
+    return t
 
 def selectMap(mapRef):
     if mapRef == "small":
@@ -48,9 +54,10 @@ class environmentMaps():
 
     def debugPrint(self):
         print("=========Maps=========")
-        print("\nOccupancy Map: \n", np.matrix(self.occupancyMap))
-        print("\nSemantic Map: \n", np.matrix(self.semanticMap))
-        print("\nBelief Map: \n", np.matrix(self.beliefMap))
+        print("Number of uncertain Locations: " + str(self.numberOfUncertainLocations))
+        print("\nOccupancy Map: \n", np.matrix(rotateToLeft(self.occupancyMap)))
+        print("\nSemantic Map: \n", np.matrix(rotateToLeft(self.semanticMap)))
+        print("\nBelief Map: \n", np.matrix(rotateToLeft(self.beliefMap)))
 
 # ////////////////////////////////////////////////////
 #//////////////////// ROOMS //////////////////////////
@@ -59,7 +66,7 @@ class roomsInMap():
     numberOfRooms = 0
     transitionMatrix = {}
     agentToRoomMapping = {}
-    roomToLocationMapping = {}
+    roomToLocationsMapping = {}
     adjacencyMatrix = [[]]
 
     # maps room number to center
@@ -67,7 +74,7 @@ class roomsInMap():
         for x in range(len(Maps.occupancyMap)):
             for y in range(len(Maps.occupancyMap[x])):
                 if (Maps.occupancyMap[x][y] == ROOMCENTER or Maps.occupancyMap[x][y] == MAPCENTER):
-                    self.transitionMatrix[Maps.semanticMap[x][y]] = utils.Location(x, y)
+                    self.transitionMatrix[Maps.semanticMap[x][y]] = pomdp.Location(x, y)
 
         self.numberOfRooms = len(self.transitionMatrix) - 1 #exclude center
 
@@ -87,10 +94,10 @@ class roomsInMap():
         for x in range(len(Maps.semanticMap)):
             for y in range(len(Maps.semanticMap[x])):
                 if Maps.semanticMap[x][y] > EMPTY:
-                    self.agentToRoomMapping[utils.Location(x,y)] = Maps.semanticMap[x][y]
-                    if Maps.semanticMap[x][y] not in self.roomToLocationMapping:
-                        self.roomToLocationMapping[Maps.semanticMap[x][y]] = []
-                    self.roomToLocationMapping[Maps.semanticMap[x][y]].append(utils.Location(x, y))
+                    self.agentToRoomMapping[pomdp.Location(x,y)] = Maps.semanticMap[x][y]
+                    if Maps.semanticMap[x][y] not in self.roomToLocationsMapping:
+                        self.roomToLocationsMapping[Maps.semanticMap[x][y]] = []
+                    self.roomToLocationsMapping[Maps.semanticMap[x][y]].append(pomdp.Location(x, y))
 
     # returns rooms connected to #index room
     def connectedRooms(self, index):
@@ -104,10 +111,11 @@ class roomsInMap():
         print("=========Rooms=========")
         for i in range(self.numberOfRooms):
             connected = self.connectedRooms(i)
-            print("\nRoom" + str(i) + " center: " + str(self.transitionMatrix[1]) +
+            print("\nRoom" + str(i) + " center: " + str(self.transitionMatrix[i]) +
                   "\nRoom" + str(i) + " is connected to:")
             for j in connected:
-                print(" " + str(j))
+                print(" " + str(j), end= " ")
+        print("\n")
 
 # ////////////////////////////////////////////////////
 #//////////////////// MAPS ///////////////////////////

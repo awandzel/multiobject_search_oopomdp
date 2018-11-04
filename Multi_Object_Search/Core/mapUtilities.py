@@ -2,7 +2,7 @@
     Created by awandzel on 10/31/18.
 '''
 
-import Multi_Object_Search.Pomdp.Location as utils
+import Multi_Object_Search.Pomdp.Location as pomdp
 import Multi_Object_Search.Core.Environment as env
 
 class mapUtilities:
@@ -31,7 +31,7 @@ class mapUtilities:
             x += 1
         elif (d == 3): #west
             x -= 1
-        return utils.Location(x,y)
+        return pomdp.Location(x,y)
 
     def checkInBounds(self, x, y):
         return not (x < 0 or x >= len(self.Maps.occupancyMap) or y < 0 \

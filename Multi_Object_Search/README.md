@@ -1,5 +1,7 @@
 pip install click
 
+note: parsing structure of language command is restricted: must be (class, <rooms>) pairs
+
 Coarse Mapping of ObjectSearchWorld into Python:
 
 Key: *Directory , -File, &Goal
