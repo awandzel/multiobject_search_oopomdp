@@ -2,7 +2,6 @@
     Created by awandzel on 11/01/18.
 '''
 import copy
-import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 
 
 class LanguageCommand:

@@ -13,6 +13,7 @@ import Multi_Object_Search.Core.RRT as RRT
 import Multi_Object_Search.OOPOMCP.Belief as Belief
 import Multi_Object_Search.Pomdp.MapUtilities as Util
 import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
+import Multi_Object_Search.Pomdp.OOState.Location as Loc
 import Multi_Object_Search.MultiObjectSearchDriver as SearchDriver
 
 
@@ -35,7 +36,7 @@ import Multi_Object_Search.MultiObjectSearchDriver as SearchDriver
 def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr):
     fileName = exp + "__" + "Mo-" + mem + "_Mc-" + cmd + "_S-" + str(sam) + "_A-" + str(act) \
                + "_M-" + map + "_Oa-" + str(obs) + "_Os-" + str(sdv) + "_D-" + str(dep) + "_Ad-" + str(adv) \
-               + "_P-" + str(psi) + ".txt";
+               + "_P-" + str(psi) + ".txt"
     #omit itr for aggregating over iterations
     print(fileName)
 
@@ -68,12 +69,14 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     LanguageParameters = pomdp.LanguageParameters(adv, psi)
 
     #-----------Program------------
-    #set true if manually specifying goal location via map
-    manualMapSpecification = False
+    #set true if manually specifying goal location via map (True vs False)
+    manualMapSpecification = True
+    #set to location for initializing agent location (e.g. Loc.Location(0,0) vs None)
+    manualStartLocation = Loc.Location(1,9)
     ROBOTEXPERIMENT = False
 
     #-----------RRT------------
-    numberOfSecondsForRRTSamples = 0
+    numberOfSecondsForRRTSamples = 2
 
     #-----------Debug----------
     debugPrintOuts = 4 #{0:none, 1:env steps, 2:belief, 3:RRT, 4:other}
@@ -115,25 +118,26 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
         Rooms.debugPrint()
 
     #start in center
-    startState = Rooms.transitionMatrix[Rooms.numberOfRooms] #8,13 ROBOT EXPERIMENT
+    startState = None
+    if manualStartLocation != None:
+        startState = manualStartLocation
+    else:
+        startState = Rooms.transitionMatrix[Rooms.numberOfRooms] #8,13 ROBOT EXPERIMENT
+
 
     # //----------------------------Parse Classes------------------------------------
     objectClasses = [int(s) for s in mem.split(",")]
     numberOfObjects = sum(objectClasses)
 
-    #TODO: reobotexperiment should be uniform for language
-    #TODO: python map starts at 0 for object/rooms
-
     #//////////////////////////////RRT///////////////////////////////////
     #//
     #//////////////////////////////RRT///////////////////////////////////
-    rrtGraph = RRT.RRT(Maps, RRTRn)
+    rrtGraph = RRT.RRT(RRTRn)
     utilities = Util.mapUtilities(Maps)
     for i in range(Rooms.numberOfRooms):
 
         locationsInRoom = []
-        #extra careful with move locations for live robot experiments
-        if ROBOTEXPERIMENT:
+        if ROBOTEXPERIMENT: #extra careful with move locations for live robot experiments
             for l in Rooms.roomToLocationsMapping[i]:
                 if not utilities.isConflictInCardinalDirections(l):
                     locationsInRoom.append(l)
@@ -141,10 +145,10 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
             locationsInRoom = Rooms.roomToLocationsMapping[i]
 
         centerOfRoom = Rooms.transitionMatrix[i]
-        rrtGraph.buildGraph(centerOfRoom, locationsInRoom, dep, numberOfSecondsForRRTSamples)
+        rrtGraph.buildGraph(Maps, centerOfRoom, locationsInRoom, dep, numberOfSecondsForRRTSamples)
 
     if debugPrintOuts > 2:
-        rrtGraph.debugPrint()
+        rrtGraph.debugPrint(Maps)
 
     #//////////////////////////////EXPERIMENT DRIVER///////////////////////////////////
     #//
@@ -160,10 +164,11 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
         belief = Belief.belief(Maps, numberOfObjects, beliefRn)
         beliefPrior = belief.makeUniformBelief()
 
-        belief.debugPrint(beliefPrior)
-
         languageCommand = LanguageCommand.LanguageCommand(Rooms, objectClasses)
-        languageCommand.parseLanguageCommand(cmd, languageRn)
+        if ROBOTEXPERIMENT:
+            languageCommand.parseLanguageCommand(None) #TODO: interface with Ros for live speech
+        else:
+            languageCommand.parseLanguageCommand(cmd, languageRn)
         languageCommand.translateToObservation(psi)
 
         belief.b = languageCommand.beliefUpdate(beliefPrior)
@@ -188,10 +193,13 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
         # //
         # //////////////////////////////OBJECT SELECTION///////////////////////////////////
         Objects = {}
-        if (not manualMapSpecification):
-            Objects = Maps.sampleObjectLocations(belief.objectDistributions, objectRn, numberOfObjects)
+        if ROBOTEXPERIMENT: #Empty: Robot must find actual locations in real environment
+            Objects = [Loc.Location(-1,-1) for i in range(numberOfObjects)]
         else:
-            Objects = Maps.extractObjectLocations(numberOfObjects)
+            if (not manualMapSpecification):
+                Objects = Maps.sampleObjectLocations(belief.objectDistributions, objectRn, numberOfObjects)
+            else:
+                Objects = Maps.extractObjectLocations(numberOfObjects)
 
         if issueNoUncertainityPOMCP:
             for o in Objects:

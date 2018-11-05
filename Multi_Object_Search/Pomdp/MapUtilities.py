@@ -2,7 +2,7 @@
     Created by awandzel on 10/31/18.
 '''
 
-import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
+import Multi_Object_Search.Pomdp.OOState.Location as Loc
 import Multi_Object_Search.Core.Environment as env
 
 class mapUtilities:
@@ -14,7 +14,7 @@ class mapUtilities:
     def isConflictInCardinalDirections(self, currentLocation):
         for i in range(4):
             moveLocation = self.moveInDirection(currentLocation.x, currentLocation.y, i)
-            if not self.checkIfInBounds(moveLocation.x, moveLocation.y):
+            if not self.checkInBounds(moveLocation.x, moveLocation.y):
                 return True
         return False
 
@@ -27,10 +27,10 @@ class mapUtilities:
             x += 1
         elif (d == 3): #west
             x -= 1
-        return pomdp.Location(x,y)
+        return Loc.Location(x,y)
 
     def checkInBounds(self, x, y):
-        return not (x < 0 or x >= len(self.Maps.occupancyMap) or y < 0 \
+        return not (x < 0 or x >= len(self.Maps.occupancyMap) or y < 0
                or y >= len(self.Maps.occupancyMap[0]) or self.Maps.occupancyMap[x][y] == env.WALL)
 
 

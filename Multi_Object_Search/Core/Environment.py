@@ -3,7 +3,7 @@
 '''
 
 import numpy as np
-import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
+import Multi_Object_Search.Pomdp.OOState.Location as Loc
 
 #Environment Constants
 E = EMPTY = -1
@@ -53,10 +53,7 @@ class environmentMaps():
                     self.beliefMap[x][y] = UNCERTAIN
 
     def sampleObjectLocations(self, objectDistributions, objectRn, numberOfObjects):
-        Objects = {}
-        for o in range(numberOfObjects):
-            Objects[o] = self.sampleObjectLocation(objectDistributions[o], objectRn)
-        return Objects
+        return [self.sampleObjectLocation(objectDistributions[o], objectRn) for o in range(numberOfObjects)]
 
     def sampleObjectLocation(self, objectDistribution, objectRn):
         curSum = 0.
@@ -64,7 +61,7 @@ class environmentMaps():
         for l in objectDistribution:
             curSum += objectDistribution[l]
             if (roll <= curSum):
-                return pomdp.Location(l.x,l.y)
+                return Loc.Location(l.x,l.y)
         raise Exception("Probabilities don't sum to 1.0: " + str(curSum))
 
 
@@ -75,13 +72,13 @@ class environmentMaps():
                 if self.occupancyMap[x][y] > EMPTY:
                     objectId = self.occupancyMap[x][y]
                     if objectId in Objects: raise Exception("No duplicate objects allowed")
-                    Objects[objectId] = pomdp.Location(x,y)
+                    Objects[objectId] = Loc.Location(x,y)
 
         for obj in Objects:
             if obj > len(Objects): raise Exception("Objects must be sequentially specified")
         if numberOfObjects != len(Objects): raise Exception("Number of objects must match what is on map")
 
-        return Objects
+        return [Objects[l] for l in sorted(Objects.keys())]
 
     def debugPrint(self):
         print("=========Maps=========")
@@ -105,7 +102,7 @@ class roomsInMap():
         for x in range(len(Maps.occupancyMap)):
             for y in range(len(Maps.occupancyMap[x])):
                 if (Maps.occupancyMap[x][y] == ROOMCENTER or Maps.occupancyMap[x][y] == MAPCENTER):
-                    self.transitionMatrix[Maps.semanticMap[x][y]] = pomdp.Location(x, y)
+                    self.transitionMatrix[Maps.semanticMap[x][y]] = Loc.Location(x, y)
 
         self.numberOfRooms = len(self.transitionMatrix) - 1 #exclude center
 
@@ -113,11 +110,11 @@ class roomsInMap():
     def setAdjacencyMatrix(self, Maps):
         if Maps.name == "small":
             self.adjacencyMatrix = [
-                [False, True, False, True, False],
-                [True, False, True, False, False],
-                [False, True, False, True, False],
-                [True, False, True, False, False],
-                [False, False, False, False, False],
+                [False, True, False, True, True],
+                [True, False, True, False, True],
+                [False, True, False, True, True],
+                [True, False, True, False, True],
+                [True, True, True, True, False],
             ]
 
     # mapping from rooms to locations and locations to rooms
@@ -125,14 +122,15 @@ class roomsInMap():
         for x in range(len(Maps.semanticMap)):
             for y in range(len(Maps.semanticMap[x])):
                 if Maps.semanticMap[x][y] > EMPTY:
-                    self.agentToRoomMapping[pomdp.Location(x,y)] = Maps.semanticMap[x][y]
+                    self.agentToRoomMapping[Loc.Location(x,y)] = Maps.semanticMap[x][y]
                     if Maps.semanticMap[x][y] not in self.roomToLocationsMapping:
                         self.roomToLocationsMapping[Maps.semanticMap[x][y]] = []
-                    self.roomToLocationsMapping[Maps.semanticMap[x][y]].append(pomdp.Location(x, y))
+                    self.roomToLocationsMapping[Maps.semanticMap[x][y]].append(Loc.Location(x, y))
 
     # returns rooms connected to #index room
     def connectedRooms(self, index):
         connected = []
+        index = int(index)
         for i in range(len(self.adjacencyMatrix[index])):
             if self.adjacencyMatrix[index][i]:
                 connected.append(i)

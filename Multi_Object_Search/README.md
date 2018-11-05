@@ -9,11 +9,11 @@ Key: *Directory , -File, &Goal
 Project Independent Files:
 -ExperimentDriver
 -WorldMap (√)
-*BeliefRoadMap
--LanguageCommands
--SearchDriver
+*BeliefRoadMap (√)
+-LanguageCommands (√)
+-SearchDriver 
 -SearchDomain
--Location (-)
+-Location (√)
 
 Hooks to SimpleRL
 *Model --> tasks

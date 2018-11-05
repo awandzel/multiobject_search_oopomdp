@@ -15,7 +15,18 @@ class SearchDomain:
         self.observationRn = observationRn
 
     def generateDomain(self):
-        pass
+        self.ActionTypes.append(Action.MoveRoom(self.util, "MoveRoom"))
+        self.ActionTypes.append(Action.Move(self.util, "Move"))
+
+    def applicableActions(self, s):
+        applicableActions = []
+        for action in self.ActionTypes:
+            applicableActions += action.applicableActions(s)
+        return applicableActions
+
+
+
+
 
 
 

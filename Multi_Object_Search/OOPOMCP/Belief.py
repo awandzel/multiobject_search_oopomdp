@@ -3,6 +3,7 @@
 '''
 import Multi_Object_Search.Core.Environment as env
 import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
+import Multi_Object_Search.Pomdp.OOState.Location as Loc
 import numpy as np
 import copy
 
@@ -24,7 +25,7 @@ class belief:
         for x in range(len(self.Maps.beliefMap)):
             for y in range(len(self.Maps.beliefMap[x])):
                 if self.Maps.beliefMap[x][y] == env.UNCERTAIN:
-                    object_b[pomdp.Location(x,y)] = 1.0
+                    object_b[Loc.Location(x,y)] = 1.0
                     normalization += 1.0
 
         for l in object_b: object_b[l] /= normalization
