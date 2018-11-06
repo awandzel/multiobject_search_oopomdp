@@ -150,16 +150,16 @@ class roomsInMap():
 #//////////////////// MAPS ///////////////////////////
 # ////////////////////////////////////////////////////
 smallOccupancy = [
-          [E, E, 1, E, E, E, E, E, E, E, E],
-          [0, X, E, E, E, E, E, E, E, X, E],
+          [E, E, E, E, E, E, E, E, E, E, E],
+          [E, X, E, E, E, E, E, E, E, X, E],
           [E, E, E, W, W, W, W, W, E, E, E],
           [E, E, W, W, W, W, W, W, W, E, E],
           [E, E, W, W, W, W, W, W, W, E, E],
           [E, E, W, W, W, Y, W, W, W, E, E],
           [E, E, W, W, W, W, W, W, W, E, E],
           [E, E, W, W, W, W, W, W, W, E, E],
-          [E, E, E, W, W, W, W, W, E, E, E],
-          [E, X, E, E, E, E, E, E, E, X, E],
+          [E, E, 1, W, W, W, W, W, E, E, E],
+          [0, X, E, E, E, E, E, E, E, X, E],
           [E, E, E, E, E, E, E, E, E, E, E],
   ]
 smallSemantic = [

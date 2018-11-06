@@ -72,7 +72,7 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     #set true if manually specifying goal location via map (True vs False)
     manualMapSpecification = True
     #set to location for initializing agent location (e.g. Loc.Location(0,0) vs None)
-    manualStartLocation = Loc.Location(1,9)
+    manualStartLocation = Loc.Location(1,9) #None
     ROBOTEXPERIMENT = False
 
     #-----------RRT------------

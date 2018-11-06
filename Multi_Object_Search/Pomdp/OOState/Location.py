@@ -3,8 +3,8 @@
 '''
 class Location:
     def __init__(self, x, y):
-        self.x = x
-        self.y = y
+        self.x = int(x)
+        self.y = int(y)
 
     def __hash__(self):
         return 37 * (self.x + self.y)

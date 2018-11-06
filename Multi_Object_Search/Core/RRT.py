@@ -22,7 +22,8 @@ class RRT():
         self.randomSeed = rand
 
     def euclideanDistance(self, l1, l2):
-        return np.sqrt(np.power(np.abs(l1.x - l2.x),2) + np.power(np.abs(l1.y - l2.y),2))
+        return np.linalg.norm(np.array([l1.x,l1.y]) - np.array([l2.x, l2.y]))
+        #return np.sqrt(np.power(np.abs(l1.x - l2.x),2) + np.power(np.abs(l1.y - l2.y),2))
 
     def buildGraph(self, Maps, centerOfRoom, cellsInRoom, visionDepth, numberOfSeconds):
         self.graph[centerOfRoom] = [] #initialize graph with center of room
