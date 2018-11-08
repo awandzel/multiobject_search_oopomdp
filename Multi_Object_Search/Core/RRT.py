@@ -18,16 +18,17 @@ from simple_rl.planning.ValueIterationClass import ValueIteration
 class RRT():
     graph = {} #location --> list[locations]
 
-    def __init__(self, rand):
+    def __init__(self, rand, visionDepth):
         self.randomSeed = rand
+        self.visionDepth = visionDepth
 
     def euclideanDistance(self, l1, l2):
         return np.linalg.norm(np.array([l1.x,l1.y]) - np.array([l2.x, l2.y]))
         #return np.sqrt(np.power(np.abs(l1.x - l2.x),2) + np.power(np.abs(l1.y - l2.y),2))
 
-    def buildGraph(self, Maps, centerOfRoom, cellsInRoom, visionDepth, numberOfSeconds):
+    def buildGraph(self, Maps, centerOfRoom, cellsInRoom, numberOfSeconds):
         self.graph[centerOfRoom] = [] #initialize graph with center of room
-        distanceBetweenVertices = 2 * visionDepth #look from vertex A & look from vertex B < 2*visionDepth
+        distanceBetweenVertices = 2 * self.visionDepth #look from vertex A & look from vertex B < 2*visionDepth
         numberOfVertices = 2; count = 0
 
         timeout = time.time() + numberOfSeconds
@@ -40,7 +41,7 @@ class RRT():
 
             if (not Maps.occupancyMap[kStepConfig.x][kStepConfig.y] == env.WALL
                 and not kStepConfig in self.graph
-                and not distanceToKStepNode <= visionDepth):
+                and not distanceToKStepNode <= self.visionDepth):
 
                 #if self.planFromAtoB(Maps, nearestNode, kStepConfig): #assuming path planner for obstacle avoidance
 
@@ -86,13 +87,13 @@ class RRT():
         #     self.wallLocations = []
         #     for x in range(len(self.Maps.occupancyMap)):
         #         for y in range(len(self.Maps.occupancyMap[x])):
-        #             if self.Maps.occupancyMap[x][y] == env.WALL:
+        #             if self.Maps.occupancyMap[x][y] == Env.WALL:
         #                 self.wallLocations.append(Loc.Location(x,y))
         #     self.computedMDP = True
 
         mdp = GridWorldMDP(width=len(Maps.occupancyMap), height=len(Maps.occupancyMap[0]),
                            init_loc=(nearestVertex.x, nearestVertex.y), goal_locs=[(kStepConfig.x, kStepConfig.y)],
-                           gamma=0.95, walls=self.wallLocations)
+                           gamma=0.95)
         vi = ValueIteration(mdp)
         vi.run_vi()
         action_seq, state_seq = vi.plan()

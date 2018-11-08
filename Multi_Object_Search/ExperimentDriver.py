@@ -72,14 +72,14 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     #set true if manually specifying goal location via map (True vs False)
     manualMapSpecification = True
     #set to location for initializing agent location (e.g. Loc.Location(0,0) vs None)
-    manualStartLocation = Loc.Location(1,9) #None
+    manualStartLocation = Loc.Location(1,1) #None
     ROBOTEXPERIMENT = False
 
     #-----------RRT------------
-    numberOfSecondsForRRTSamples = 2
+    numberOfSecondsForRRTSamples = 0
 
     #-----------Debug----------
-    debugPrintOuts = 4 #{0:none, 1:env steps, 2:belief, 3:RRT, 4:other}
+    debugPrintOuts = 4 #{0:none, 1:Env steps, 2:belief, 3:RRT, 4:other}
 
     #visualizes selected actions of agent for task
     issuePomdpVisualizer = True
@@ -132,7 +132,7 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
     #//////////////////////////////RRT///////////////////////////////////
     #//
     #//////////////////////////////RRT///////////////////////////////////
-    rrtGraph = RRT.RRT(RRTRn)
+    rrtGraph = RRT.RRT(RRTRn, dep)
     utilities = Util.mapUtilities(Maps)
     for i in range(Rooms.numberOfRooms):
 
@@ -145,7 +145,7 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
             locationsInRoom = Rooms.roomToLocationsMapping[i]
 
         centerOfRoom = Rooms.transitionMatrix[i]
-        rrtGraph.buildGraph(Maps, centerOfRoom, locationsInRoom, dep, numberOfSecondsForRRTSamples)
+        rrtGraph.buildGraph(Maps, centerOfRoom, locationsInRoom, numberOfSecondsForRRTSamples)
 
     if debugPrintOuts > 2:
         rrtGraph.debugPrint(Maps)

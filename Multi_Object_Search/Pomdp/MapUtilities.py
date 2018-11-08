@@ -3,7 +3,8 @@
 '''
 
 import Multi_Object_Search.Pomdp.OOState.Location as Loc
-import Multi_Object_Search.Core.Environment as env
+import Multi_Object_Search.Core.Environment as Env
+import Multi_Object_Search.Pomdp.Domain.StaticConstants as Constants
 import numpy as np
 
 class mapUtilities:
@@ -32,9 +33,21 @@ class mapUtilities:
 
     def checkInBounds(self, x, y):
         return not (x < 0 or x >= len(self.Maps.occupancyMap) or y < 0
-               or y >= len(self.Maps.occupancyMap[0]) or self.Maps.occupancyMap[x][y] == env.WALL)
+                    or y >= len(self.Maps.occupancyMap[0]) or self.Maps.occupancyMap[x][y] == Env.WALL)
 
     def euclideanDistance(self, l1, l2):
         return np.linalg.norm(np.array([l1.x,l1.y]) - np.array([l2.x, l2.y]))
+
+
+
+
+
+
+
+
+
+
+
+
 
 

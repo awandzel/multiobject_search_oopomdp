@@ -18,8 +18,10 @@ class SearchDomain:
 
     def generateDomain(self):
         #Add action types for enumeration
-        self.ActionTypes.append(Action.MoveRoom(self.util, Constants.ACTION_MOVE_ROOM))
-        self.ActionTypes.append(Action.Move(self.util, Constants.ACTION_MOVE))
+        # self.ActionTypes.append(Action.MoveRoom(self.util, Constants.ACTION_MOVE_ROOM))
+        # self.ActionTypes.append(Action.Move(self.util, Constants.ACTION_MOVE))
+        self.ActionTypes.append(Action.Look(self.util, Constants.ACTION_LOOK))
+        self.ActionTypes.append(Action.Find(self.util, Constants.ACTION_FIND))
 
         self.FactoredModel = FactoredModel.FactoredModel(self.util, self.PomdpParameters)
 
