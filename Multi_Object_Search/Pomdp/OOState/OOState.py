@@ -40,10 +40,6 @@ class OOState:
         if other == None or self.__class__ != other.__class__: return False
         if not isinstance(other, OOState): return False
 
-        a = self.agent.__eq__(other.agent)
-        b = self.searchObjectsEquals(other)
-        c = self.hasChosenEquals(other)
-
         return self.agent.__eq__(other.agent) and self.searchObjectsEquals(other) and self.hasChosenEquals(other)
 
     def searchObjectsToString(self):

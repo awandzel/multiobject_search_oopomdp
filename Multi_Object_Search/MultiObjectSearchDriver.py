@@ -4,12 +4,14 @@
 import Multi_Object_Search.Pomdp.MapUtilities as Util
 import Multi_Object_Search.Pomdp.OOState.OOState as State
 import Multi_Object_Search.Pomdp.Domain.Domain as Domain
-import Multi_Object_Search.Pomdp.ObservationFunction.SensingRegion as SensingRegion
+import Multi_Object_Search.Pomdp.SimulatedEnvironment as Environment
+import copy
 import Multi_Object_Search.Pomdp.OOState.Location as Loc
-import Multi_Object_Search.Pomdp.ObservationFunction.FanShapedSensor as FanShapedSensor
+import Multi_Object_Search.Pomdp.ObservationFunction.FanShapedSensor as F
+import Multi_Object_Search.Pomdp.ObservationFunction.MultiObjectObservation as Observation
 
 
-def executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph,
+def executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph, belief,
                                               PomcpParameters, PomdpParameters, ObservationModelParameters, LanguageParameters,
                                               startState, POMCPRn, observationRn, ROBOTEXPERIMENT, debugPrintOuts):
 
@@ -21,16 +23,15 @@ def executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph,
 
     environmentState = State.OOState(startState, Objects, [False for i in range(len(Objects))])
 
-    fan = FanShapedSensor.FanShapedSensor(util, ObservationModelParameters, observationRn)
-    o = fan.sample(environmentState, "Look_0") #look right
-    fan.toString(o, "Look_0")
-    o1 = fan.sample(environmentState, "Look_1") #null
-    fan.toString(o1, "Look_1")
-    o2 = fan.sample(environmentState, "Look_2")
-    fan.toString(o2, "Look_2")
+    if ROBOTEXPERIMENT:
+        env = Environment.RealEnvironment(domain, environmentState, debugPrintOuts)
+    else:
+        env = Environment.SimulatedEnvironment(domain, environmentState, debugPrintOuts)
 
+    #sample heat map for initialState (OOPOMCP does not get access to environmentState)
+    initialState = belief.sampleState(environmentState)
 
-
+    #POMCP
 
 
 

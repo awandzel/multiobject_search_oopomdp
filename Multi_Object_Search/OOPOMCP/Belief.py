@@ -4,6 +4,7 @@
 import Multi_Object_Search.Core.Environment as env
 import Multi_Object_Search.Pomdp.PomdpConfiguration as pomdp
 import Multi_Object_Search.Pomdp.OOState.Location as Loc
+import Multi_Object_Search.Pomdp.OOState.OOState as State
 import numpy as np
 import copy
 
@@ -33,6 +34,26 @@ class belief:
         for o in range(self.numberOfObjects):
             bCopy[o] = copy.deepcopy(object_b)
         return bCopy
+
+    def sampleState(self, s):
+        objects = []
+        for o in range(self.numberOfObjects):
+            if s.hasChosen[o]:
+                objects.append(s.searchObjects[o])
+            else:
+                objects.append(self.sampleLocation(o))
+        newState = State.OOState(s.agent, objects, s.hasChosen)
+        return copy.deepcopy(newState)
+
+    def sampleLocation(self, o):
+        curSum = 0.
+        roll = self.beliefRn.random()
+        for l in self.b[o]:
+            curSum += self.b[o][l]
+            if (roll <= curSum):
+                return l
+        raise Exception("Probabilities don't sum to 1.0: " + str(curSum))
+
 
     def debugPrint(self, b):
         for o in range(self.numberOfObjects):

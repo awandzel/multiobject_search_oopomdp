@@ -10,7 +10,7 @@ import copy
 class FactoredModel:
 
     def __init__(self, util, PomdpParameters):
-        self.reward_function = self.RewardFunction(util, PomdpParameters)
+        self.RewardFunction = self.RewardFunction(util, PomdpParameters)
         self.TerminationFunction = self.TerminationFunction()
         self.TransitionFunction = self.TransitionFunction()
 

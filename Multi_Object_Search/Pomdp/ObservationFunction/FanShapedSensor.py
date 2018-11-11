@@ -1,10 +1,11 @@
 '''
-    Created by awandzel on 03/06/18.
+    Created by awandzel on 11/06/18.
 '''
 
 import Multi_Object_Search.Pomdp.Domain.StaticConstants as Constants
 import Multi_Object_Search.Pomdp.ObservationFunction.SensingRegion as SensingRegion
 import Multi_Object_Search.Pomdp.OOState.Location as Loc
+import Multi_Object_Search.Pomdp.ObservationFunction.MultiObjectObservation as Observation
 from scipy.stats import norm
 
 class FanShapedSensor:
@@ -30,7 +31,6 @@ class FanShapedSensor:
         for object in o:
             print(object)
 
-
     def realWorldExperimentObservation(self, message, s, a): #for robot experiments
         locations = SensingRegion.locationsInVisionCone(self.util, s, a)
 
@@ -55,14 +55,13 @@ class FanShapedSensor:
 
     def sample(self, s, a):
         params = Constants.parseAction(a)  # {name, x, y}
-        observation = None
 
         if params[0] == Constants.ACTION_LOOK:
             observation = self.sampleObservationModel(s, a)
         else:
             observation = self.nullObservation(s, a)
 
-        return observation
+        return Observation.MultiObjectObservation(observation)
 
     def nullObservation(self, s, a):
         return [Constants.NULL_OBSERVATION]
@@ -72,7 +71,6 @@ class FanShapedSensor:
 
         locations = SensingRegion.locationsInVisionCone(self.util, s, a) #locations in sensing region
         for o in range(len(s.searchObjects)):
-            objectObservation = []
 
             #observation types
             obsObj = "Obj" + str(o)

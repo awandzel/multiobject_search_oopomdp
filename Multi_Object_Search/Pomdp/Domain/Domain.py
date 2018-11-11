@@ -4,6 +4,7 @@
 import Multi_Object_Search.Pomdp.Domain.ParameterizedActions as Action
 import Multi_Object_Search.Pomdp.Domain.FactoredModel as FactoredModel
 import Multi_Object_Search.Pomdp.Domain.StaticConstants as Constants
+import Multi_Object_Search.Pomdp.ObservationFunction.FanShapedSensor as FanShapedSensor
 
 class SearchDomain:
     #Domain general data members
@@ -19,22 +20,13 @@ class SearchDomain:
 
     def generateDomain(self):
         #Add action types for enumeration
-        # self.ActionTypes.append(Action.MoveRoom(self.util, Constants.ACTION_MOVE_ROOM))
-        # self.ActionTypes.append(Action.Move(self.util, Constants.ACTION_MOVE))
+        self.ActionTypes.append(Action.MoveRoom(self.util, Constants.ACTION_MOVE_ROOM))
+        self.ActionTypes.append(Action.Move(self.util, Constants.ACTION_MOVE))
         self.ActionTypes.append(Action.Look(self.util, Constants.ACTION_LOOK))
         self.ActionTypes.append(Action.Find(self.util, Constants.ACTION_FIND))
 
         self.FactoredModel = FactoredModel.FactoredModel(self.util, self.PomdpParameters)
-
-
-
-
-
-        #TODO: Observation function
-
-
-
-
+        self.ObservationModel = FanShapedSensor.FanShapedSensor(self.util, self.ObservationModelParameters, self.observationRn)
 
 
     def applicableActions(self, s):

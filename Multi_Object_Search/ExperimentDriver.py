@@ -207,7 +207,7 @@ def experimentDriver(exp, mem, cmd, sam, act, map, obs, sdv, dep, adv, psi, itr)
                     belief.b[o][l] = 1.0 if l == Objects[o] else 0.0
 
         #//----------------------------Experiment------------------------------------
-        SearchDriver.executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph,
+        SearchDriver.executeMultiObjectSearch(Maps, Rooms, Objects, rrtGraph, belief,
                                               PomcpParameters, PomdpParameters, ObservationModelParameters, LanguageParameters,
                                               startState, POMCPRn, observationRn, ROBOTEXPERIMENT, debugPrintOuts)
 
