@@ -8,6 +8,9 @@ ACTION_MOVE_ROOM = "MoveRoom"
 ACTION_LOOK = "Look"
 ACTION_FIND = "Find"
 
+NULL_OBSERVATION = "doNotCare"
+
+
 #domain general function
 def parseAction(action):
     return action.split(DELIMITER) #assumes actions are specified as "Parameter_Parameter_..."

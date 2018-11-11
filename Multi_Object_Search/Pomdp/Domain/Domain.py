@@ -9,6 +9,7 @@ class SearchDomain:
     #Domain general data members
     ActionTypes = [] #list of parameterized actions
     FactoredModel = None
+    ObservationModel = None
 
     def __init__(self, util, PomdpParameters, ObservationModelParameters, observationRn):
         self.util = util
@@ -24,6 +25,10 @@ class SearchDomain:
         self.ActionTypes.append(Action.Find(self.util, Constants.ACTION_FIND))
 
         self.FactoredModel = FactoredModel.FactoredModel(self.util, self.PomdpParameters)
+
+
+
+
 
         #TODO: Observation function
 

@@ -159,7 +159,7 @@ smallOccupancy = [
           [E, E, W, W, W, W, W, W, W, E, E],
           [E, E, W, W, W, W, W, W, W, E, E],
           [E, E, 1, W, W, W, W, W, E, E, E],
-          [0, X, E, E, E, E, E, E, E, X, E],
+          [E, X, 0, E, E, E, E, E, E, X, E],
           [E, E, E, E, E, E, E, E, E, E, E],
   ]
 smallSemantic = [
