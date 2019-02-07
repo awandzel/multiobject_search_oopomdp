@@ -35,6 +35,10 @@ class SearchDomain:
             applicableActions += action.applicableActions(s)
         return applicableActions
 
+    def selectRandomAction(self, state, random):
+        applicableActions = self.applicableActions(state)
+        return random.choice(applicableActions)
+
 
 
 

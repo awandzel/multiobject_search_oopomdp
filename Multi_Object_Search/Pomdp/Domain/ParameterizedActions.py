@@ -59,7 +59,7 @@ class MoveRoom(ParameterizedActions):
         #calcualte all adjacent rooms for transition
         for r in connectedRooms:
             l = self.util.Rooms.transitionMatrix[r]
-            actions.append(Constants.ACTION_MOVE_ROOM + "_" + str(l.x) + "_" + str(l.y + "_" + str(r)))
+            actions.append(Constants.ACTION_MOVE_ROOM + "_" + str(l.x) + "_" + str(l.y) + "_" + str(r))
         return actions
 
 class Look(ParameterizedActions):

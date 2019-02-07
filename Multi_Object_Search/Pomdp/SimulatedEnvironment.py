@@ -4,16 +4,29 @@
 
 
 class Environment:
-    def __init__(self, domain, initialState, debugPrint, discountFactor=.95):
+    def __init__(self, domain, environmentState, debugPrint, discountFactor=.95):
         self.domain = domain
-        self.currentState = initialState
+        self.currentState = environmentState
         self.debugPrint = debugPrint
         self.discountFactor = discountFactor
         self.discount = 1.0
+        self.episode = self.Episode(environmentState)
 
     def executeAction(self, a):
         pass
 
+    class Episode:
+        def __init__(self, s):
+            self.stateSequence = [s]
+            self.observationSequence = []
+            self.actionSequence = []
+            self.rewardSequence = []
+
+        def transition(self, s_, o, a, r):
+            self.stateSequence.append(s_)
+            self.observationSequence.append(o)
+            self.actionSequence.append(a)
+            self.rewardSequence.append(r)
 
 class SimulatedEnvironment(Environment):
 

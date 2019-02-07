@@ -35,6 +35,13 @@ class belief:
             bCopy[o] = copy.deepcopy(object_b)
         return bCopy
 
+    def pomcpSample(self, s, numberOfSamples):
+        beliefEstimate = []
+
+        for i in range(numberOfSamples):
+            beliefEstimate.append(self.sampleState(s))
+        return beliefEstimate
+
     def sampleState(self, s):
         objects = []
         for o in range(self.numberOfObjects):

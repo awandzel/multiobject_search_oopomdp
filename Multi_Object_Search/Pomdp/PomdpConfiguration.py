@@ -3,11 +3,10 @@
 '''
 
 class PomcpParmeters:
-    def __init__(self, maxSamples, maxActions, pomcpHeight, pomcpReinvigorate, pomcpReinvigorateSamples, pomcpExploration, pomcpDiscount):
+    def __init__(self, maxSamples, maxActions, pomcpDepth, pomcpReinvigorateSamples, pomcpExploration, pomcpDiscount):
         self.maxSamples = maxSamples
         self.maxActions = maxActions
-        self.pomcpHeight = pomcpHeight
-        self.pomcpReinvigorate = pomcpReinvigorate
+        self.pomcpDepth = pomcpDepth
         self.pomcpReinvigorateSamples = pomcpReinvigorateSamples
         self.pomcpExploration = pomcpExploration
         self.pomcpDiscount = pomcpDiscount

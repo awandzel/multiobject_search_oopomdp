@@ -22,8 +22,8 @@ class LanguageCommand:
         self.languageToClass[("person", "persons")] = 4
 
     def setVocabularyForRooms(self):
-        self.languageToRoom["library"] = 0
-        self.languageToRoom["kitchen"] = 1
+        self.languageToRoom["kitchen"] = 0
+        self.languageToRoom["library"] = 1
         self.languageToRoom["storage"] = 2
         self.languageToRoom["livingroom"] = 3
         self.languageToRoom["robotics"] = 4
