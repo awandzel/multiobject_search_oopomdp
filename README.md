@@ -1,4 +1,4 @@
-# OOPOMDP MultiObject Search
+# MultiObject Search With Object Oriented POMDPs
 
 This repository contains the codes for our ICRA 2019 paper. For more details, please refer to the [Video](https://www.youtube.com/watch?v=ssmez0rjF1Y) or paper: [Arthur Wandzel, Yoonseon Oh, Michael Fishman, Nishanth Kumar, Lawson L.S. Wong, and Stefanie Tellex,  Multi-Object Search using Object-Oriented POMDPs](http://www.ccs.neu.edu/home/lsw/papers/icra2019-mop.pdf)
 
